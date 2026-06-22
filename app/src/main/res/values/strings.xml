@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Riichi Trainer</string>
+    <string name="default_nickname">Player</string>
+    <string name="resources_main_test">The resources below can help new players in learning and remembering the rules of Riichi Mahjong. The Yaku list describes different winnable hands and scoring which determines their value.</string>
+    <string name="quiz_default_question_test">Question 1/10</string>
+    <string name="quiz_situation">Situation</string>
+    <string name="quiz_mode">Mode</string>
+    <string name="quiz_dora">Dora</string>
+    <string name="quiz_river">River</string>
+    <string name="quiz_ansA">Answer A</string>
+    <string name="quiz_ansB">Answer B</string>
+    <string name="quiz_ansC">Answer C</string>
+    <string name="quiz_ansD">Answer D</string>
+    <string name="quiz_next">Next</string>
+    <string name="main_long_text">A small quiz app for practicing riichi mahjong gameplay. You can train your skills in discard decisions, yaku recognition or basic opponent reading skills</string>
+</resources>

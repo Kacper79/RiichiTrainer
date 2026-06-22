@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/riichi_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="22dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Player stats"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/riichi_dark"
+            android:paddingBottom="16dp" />
+
+        <TextView
+            android:id="@+id/statsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/card_bg_simple"
+            android:text="Stats"
+            android:textSize="17sp"
+            android:padding="18dp"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reset stats"
+            android:textColor="#FFFFFF"
+            android:background="@color/button_main_simple" />
+
+    </LinearLayout>
+</LinearLayout>

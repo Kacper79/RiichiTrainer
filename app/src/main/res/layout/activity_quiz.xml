@@ -1,0 +1,134 @@
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/riichi_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="14dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:id="@+id/progressText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/quiz_default_question_test"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+            <pl.uksw.riichitrainer.ui.TimerPieView
+                android:id="@+id/timerView"
+                android:layout_width="74dp"
+                android:layout_height="74dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/card_bg_simple"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/modeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/quiz_mode"
+                android:textStyle="bold"
+                android:textColor="@color/riichi_accent"
+                android:paddingBottom="6dp" />
+
+            <TextView
+                android:id="@+id/situationText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/quiz_situation"
+                android:textSize="16sp"
+                android:paddingBottom="8dp" />
+
+            <TextView
+                android:id="@+id/doraText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/quiz_dora"
+                android:textSize="14sp"
+                android:paddingBottom="6dp" />
+
+            <pl.uksw.riichitrainer.ui.TileStripView
+                android:id="@+id/handView"
+                android:layout_width="match_parent"
+                android:layout_height="78dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:id="@+id/riverText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/quiz_river"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/answer0Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/quiz_ansA"
+            android:background="@color/answer_normal"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/answer1Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/quiz_ansB"
+            android:background="@color/answer_normal"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/answer2Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/quiz_ansC"
+            android:background="@color/answer_normal"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/answer3Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/quiz_ansD"
+            android:background="@color/answer_normal"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/feedbackText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="15sp"
+            android:background="@color/card_bg_simple"
+            android:visibility="gone"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/quiz_next"
+            android:textColor="#FFFFFF"
+            android:background="@color/button_main_simple"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</LinearLayout >

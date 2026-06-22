@@ -1,0 +1,16 @@
+.idea
+.vscode
+.gradle
+build
+app/build
+
+*.log
+local.properties
+*.apk
+*.aab
+output-metadata.json
+
+*.jks
+*.keystore
+google-services.json
+captures

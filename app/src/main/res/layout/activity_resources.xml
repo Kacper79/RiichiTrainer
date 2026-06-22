@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/riichi_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="22dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Riichi resources"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/riichi_dark"
+            android:paddingBottom="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/resources_main_test"
+            android:padding="14dp"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/rulesButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Open basic rules"
+            android:textColor="#FFFFFF"
+            android:background="@color/button_main_simple" />
+
+        <Button
+            android:id="@+id/yakuButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Open Yaku list"
+            android:textColor="#FFFFFF"
+            android:background="@color/button_main_simple"
+            android:layout_marginBottom="10dp" />
+
+        <Button
+            android:id="@+id/wikiButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Open Riichi Wiki"
+            android:textColor="#FFFFFF"
+            android:background="@color/button_main_simple"
+            android:layout_marginBottom="10dp" />
+
+    </LinearLayout>
+</LinearLayout>

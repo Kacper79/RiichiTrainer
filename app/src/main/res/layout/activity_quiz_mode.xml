@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/riichi_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose quiz mode"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/riichi_dark"
+            android:paddingBottom="16dp" />
+
+        <Button
+            android:id="@+id/discardButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Discard decision"
+            android:textColor="#FFFFFF"
+            android:background="@color/button_main_simple"
+            android:layout_marginBottom="10dp" />
+
+        <Button
+            android:id="@+id/yakuButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Yaku recognition"
+            android:textColor="#FFFFFF"
+            android:background="@color/button_main_simple"
+            android:layout_marginBottom="10dp" />
+
+        <Button
+            android:id="@+id/readingButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Opponent reading"
+            android:textColor="#FFFFFF"
+            android:background="@color/button_main_simple"
+            android:layout_marginBottom="10dp" />
+
+        <Button
+            android:id="@+id/mixedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mixed quiz"
+            android:textColor="#FFFFFF"
+            android:background="@color/button_main_simple" />
+
+    </LinearLayout>
+</LinearLayout>

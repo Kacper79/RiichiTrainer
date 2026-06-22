@@ -1,0 +1,20 @@
+<resources>
+<!--    <color name="riichi_dark">#263238</color>-->
+<!--    <color name="riichi_primary">#455A64</color>-->
+<!--    <color name="riichi_accent">#D84315</color>-->
+<!--    <color name="riichi_bg">#F5F5F5</color>-->
+<!--    <color name="riichi_good">#2E7D32</color>-->
+<!--    <color name="riichi_bad">#C62828</color>-->
+    <color name="riichi_bg">#ECEFF1</color>
+    <color name="riichi_dark">#263238</color>
+    <color name="riichi_accent">#1565C0</color>
+
+    <color name="answer_normal">#FFFFFF</color>
+    <color name="answer_text_dark">#263238</color>
+    <color name="answer_text_light">#FFFFFF</color>
+    <color name="answer_correct">#2E7D32</color>
+    <color name="answer_wrong">#C62828</color>
+
+    <color name="card_bg_simple">#FFFFFF</color>
+    <color name="button_main_simple">#37474F</color>
+</resources>

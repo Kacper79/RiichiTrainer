@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/riichi_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/riichi_dark"
+            android:paddingBottom="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nickname" />
+
+        <EditText
+            android:id="@+id/nicknameEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:singleLine="true"
+            android:background="#FFFFFF"
+            android:layout_marginBottom="14dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Difficulty" />
+
+        <Spinner
+            android:id="@+id/difficultySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/difficulty_labels"
+            android:layout_marginBottom="14dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Seconds per question" />
+
+        <EditText
+            android:id="@+id/timeEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:singleLine="true"
+            android:background="#FFFFFF"
+            android:layout_marginBottom="14dp" />
+
+        <CheckBox
+            android:id="@+id/timerCheck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Use question timer" />
+
+        <CheckBox
+            android:id="@+id/soundCheck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Play quiz sound effects" />
+
+        <CheckBox
+            android:id="@+id/musicCheck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Play background music during quiz" />
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save settings"
+            android:textColor="#FFFFFF"
+            android:background="@color/button_main_simple"
+            android:layout_marginTop="18dp" />
+
+    </LinearLayout>
+</LinearLayout>
