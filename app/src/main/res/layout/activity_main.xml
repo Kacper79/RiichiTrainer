@@ -24,7 +24,7 @@
             android:id="@+id/welcomeText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Welcome, Player"
+            android:text="@string/view_main_welcome_heading"
             android:gravity="center"
             android:textSize="16sp"
             android:paddingBottom="20dp" />
@@ -33,7 +33,7 @@
             android:id="@+id/startButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Start quiz"
+            android:text="@string/view_main_start_btn"
             android:textColor="#FFFFFF"
             android:background="@color/button_main_simple"
             android:layout_marginBottom="10dp" />
@@ -42,7 +42,7 @@
             android:id="@+id/settingsButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Settings"
+            android:text="@string/view_main_settings_btn"
             android:textColor="#FFFFFF"
             android:background="@color/button_main_simple"
             android:layout_marginBottom="10dp" />
@@ -51,7 +51,7 @@
             android:id="@+id/statsButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Player stats"
+            android:text="@string/view_main_stats_bth"
             android:textColor="#FFFFFF"
             android:background="@color/button_main_simple"
             android:layout_marginBottom="10dp" />
@@ -60,7 +60,7 @@
             android:id="@+id/resourcesButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Riichi resources"
+            android:text="@string/view_main_res_bthn"
             android:textColor="#FFFFFF"
             android:background="@color/button_main_simple" />
 

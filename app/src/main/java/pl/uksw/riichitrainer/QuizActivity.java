@@ -26,6 +26,7 @@ public class QuizActivity extends Activity implements QuizTimerTask.TimerListene
     private static final String STATE_SELECTED = "selected";
     private static final String STATE_MILLIS_LEFT = "millis_left";
     private static final String STATE_QUESTION_SEED = "question_seed";
+    private static final int ANSWER_SHUFFLE_CHANCE_PERCENT = 70;
     private TextView progressText;
     private TextView modeText;
     private TextView situationText;
@@ -136,6 +137,8 @@ public class QuizActivity extends Activity implements QuizTimerTask.TimerListene
         }
 
         Question q = questions.get(currentIndex);
+        q.shuffleAnswers(questionSeed, ANSWER_SHUFFLE_CHANCE_PERCENT);
+
         progressText.setText("Question " + (currentIndex + 1) + "/" + questions.size() + "   Score: " + score);
         modeText.setText(QuestionBank.getModeLabel(q.getMode())); // + " | " + q.getTitle() - hide that so the answer to the question is not that obvious - needed only for debug
         situationText.setText(q.getSituation());
@@ -158,17 +161,13 @@ public class QuizActivity extends Activity implements QuizTimerTask.TimerListene
 
         feedbackText.setVisibility(answered ? View.VISIBLE : View.GONE);
         nextButton.setVisibility(answered ? View.VISIBLE : View.GONE);
-        timerView.setTimerEnabled(timerEnabled);
+
+        updateTimerViewFromState();
 
         if (answered) {
             showAnsweredState(selectedAnswer);
         } else {
             feedbackText.setText("");
-            if (timerEnabled) {
-                timerView.setProgress(millisLeft / (float) totalMillis, millisLeft / 1000);
-            } else {
-                timerView.setProgress(1f, 0);
-            }
         }
     }
 
@@ -177,6 +176,7 @@ public class QuizActivity extends Activity implements QuizTimerTask.TimerListene
         selectedAnswer = index;
         answered = true;
         stopTimer();
+        updateTimerViewFromState();
 
         Question q = questions.get(currentIndex);
         boolean correct = index == q.getCorrectIndex();
@@ -232,6 +232,20 @@ public class QuizActivity extends Activity implements QuizTimerTask.TimerListene
         answerButtons[index].setTextColor(getColorValue(textColorId));
     }
 
+    private void updateTimerViewFromState() {
+        timerView.setTimerEnabled(timerEnabled);
+
+        if (!timerEnabled) {
+            timerView.setProgress(1f, 0);
+            return;
+        }
+
+        float progress = totalMillis <= 0 ? 0f : millisLeft / (float) totalMillis;
+        int secondsLeft = (int) Math.ceil(millisLeft / 1000.0);
+
+        timerView.setProgress(progress, secondsLeft);
+    }
+
     private void goToNextQuestion() {
         currentIndex++;
         answered = false;
@@ -283,6 +297,7 @@ public class QuizActivity extends Activity implements QuizTimerTask.TimerListene
     @Override
     public void onTimerFinished() {
         if (!answered) {
+            millisLeft = 0;
             selectedAnswer = -1;
             answered = true;
             soundHelper.playWrong(soundEnabled);

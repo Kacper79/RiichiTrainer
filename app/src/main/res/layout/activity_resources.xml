@@ -12,7 +12,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Riichi resources"
+            android:text="@string/view_res_heading"
             android:textSize="30sp"
             android:textStyle="bold"
             android:textColor="@color/riichi_dark"
@@ -29,15 +29,16 @@
             android:id="@+id/rulesButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Open basic rules"
+            android:text="@string/view_res_opt_basic_rules"
             android:textColor="#FFFFFF"
-            android:background="@color/button_main_simple" />
+            android:background="@color/button_main_simple"
+            android:layout_marginBottom="10dp"/>
 
         <Button
             android:id="@+id/yakuButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Open Yaku list"
+            android:text="@string/view_res_opt_yaku_list"
             android:textColor="#FFFFFF"
             android:background="@color/button_main_simple"
             android:layout_marginBottom="10dp" />
@@ -46,7 +47,7 @@
             android:id="@+id/wikiButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Open Riichi Wiki"
+            android:text="@string/view_res_opt_wiki"
             android:textColor="#FFFFFF"
             android:background="@color/button_main_simple"
             android:layout_marginBottom="10dp" />

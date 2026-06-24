@@ -12,7 +12,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Settings"
+            android:text="@string/view_settings_heading"
             android:textSize="28sp"
             android:textStyle="bold"
             android:textColor="@color/riichi_dark"
@@ -21,7 +21,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nickname" />
+            android:text="@string/view_settings_opt_nick" />
 
         <EditText
             android:id="@+id/nicknameEdit"
@@ -35,7 +35,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Difficulty" />
+            android:text="@string/view_settings_opt_diff" />
 
         <Spinner
             android:id="@+id/difficultySpinner"
@@ -47,7 +47,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Seconds per question" />
+            android:text="@string/view_settings_opt_sec_per_ques" />
 
         <EditText
             android:id="@+id/timeEdit"
@@ -62,25 +62,25 @@
             android:id="@+id/timerCheck"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Use question timer" />
+            android:text="@string/view_settings_opt_timel_imit" />
 
         <CheckBox
             android:id="@+id/soundCheck"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Play quiz sound effects" />
+            android:text="@string/view_settings_opt_sfx" />
 
         <CheckBox
             android:id="@+id/musicCheck"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Play background music during quiz" />
+            android:text="@string/view_settings_opt_bgm" />
 
         <Button
             android:id="@+id/saveButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Save settings"
+            android:text="@string/view_settings_save_button"
             android:textColor="#FFFFFF"
             android:background="@color/button_main_simple"
             android:layout_marginTop="18dp" />

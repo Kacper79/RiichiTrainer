@@ -12,7 +12,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Player stats"
+            android:text="@string/view_stats_heading"
             android:textSize="30sp"
             android:textStyle="bold"
             android:textColor="@color/riichi_dark"
@@ -23,7 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/card_bg_simple"
-            android:text="Stats"
+            android:text="Placeholder stats (should never be seen)"
             android:textSize="17sp"
             android:padding="18dp"
             android:layout_marginBottom="16dp" />
@@ -32,7 +32,7 @@
             android:id="@+id/resetButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Reset stats"
+            android:text="@string/view_stats_reset_btn"
             android:textColor="#FFFFFF"
             android:background="@color/button_main_simple" />
 

@@ -12,7 +12,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Quiz result"
+            android:text="@string/view_result_heading"
             android:textSize="30sp"
             android:textStyle="bold"
             android:textColor="@color/riichi_dark"
@@ -24,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/card_bg_simple"
-            android:text="Result"
+            android:text="Result placeholder (should never be seen)"
             android:textSize="18sp"
             android:gravity="center"
             android:padding="20dp"
@@ -34,7 +34,7 @@
             android:id="@+id/shareButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Share result"
+            android:text="@string/view_result_share_btn"
             android:textColor="#FFFFFF"
             android:background="@color/button_main_simple"
             android:layout_marginBottom="10dp" />
@@ -43,7 +43,7 @@
             android:id="@+id/retryButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Try again"
+            android:text="@string/view_result_retry_btn"
             android:textColor="#FFFFFF"
             android:background="@color/button_main_simple"
             android:layout_marginBottom="10dp" />
@@ -52,7 +52,7 @@
             android:id="@+id/mainButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Main menu"
+            android:text="@string/view_result_main_btn"
             android:textColor="#FFFFFF"
             android:background="@color/button_main_simple" />
 

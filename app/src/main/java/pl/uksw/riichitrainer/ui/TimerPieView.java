@@ -15,18 +15,8 @@ public class TimerPieView extends View {
     private int seconds = 0;
     private boolean enabled = true;
 
-    public TimerPieView(Context context) {
-        super(context);
-        init();
-    }
-
     public TimerPieView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init();
-    }
-
-    public TimerPieView(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
         init();
     }
 
@@ -42,7 +32,7 @@ public class TimerPieView extends View {
 
     public void setTimerEnabled(boolean enabled) {
         this.enabled = enabled;
-        invalidate();
+        invalidate(); //use this function to rerender timer
     }
 
     public void setProgress(float progress, int seconds) {

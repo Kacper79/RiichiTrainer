@@ -14,18 +14,8 @@ public class TileStripView extends View {
     private Paint borderPaint;
     private Paint textPaint;
 
-    public TileStripView(Context context) {
-        super(context);
-        init();
-    }
-
     public TileStripView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init();
-    }
-
-    public TileStripView(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
         init();
     }
 

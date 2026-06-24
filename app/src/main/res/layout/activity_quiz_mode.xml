@@ -12,7 +12,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Choose quiz mode"
+            android:text="@string/view_mode_choose_text"
             android:textSize="28sp"
             android:textStyle="bold"
             android:textColor="@color/riichi_dark"
@@ -22,7 +22,7 @@
             android:id="@+id/discardButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Discard decision"
+            android:text="@string/view_mode_opt_discard"
             android:textColor="#FFFFFF"
             android:background="@color/button_main_simple"
             android:layout_marginBottom="10dp" />
@@ -31,7 +31,7 @@
             android:id="@+id/yakuButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Yaku recognition"
+            android:text="@string/view_mode_opt_yaku"
             android:textColor="#FFFFFF"
             android:background="@color/button_main_simple"
             android:layout_marginBottom="10dp" />
@@ -40,7 +40,7 @@
             android:id="@+id/readingButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Opponent reading"
+            android:text="@string/view_mode_opt_oppo"
             android:textColor="#FFFFFF"
             android:background="@color/button_main_simple"
             android:layout_marginBottom="10dp" />
@@ -49,7 +49,7 @@
             android:id="@+id/mixedButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Mixed quiz"
+            android:text="@string/view_mode_opt_mixed"
             android:textColor="#FFFFFF"
             android:background="@color/button_main_simple" />
 

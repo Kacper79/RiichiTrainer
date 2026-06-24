@@ -6,16 +6,18 @@
         android:allowBackup="true"
         android:label="Riichi Trainer"
         android:theme="@style/AppTheme">
+<!--    android docs for styling using xml    https://developer.android.com/develop/ui/views/theming/themes?hl=pl-->
 
-        <activity android:name=".ResourcesActivity" />
-        <activity android:name=".StatsActivity" />
-        <activity android:name=".ResultActivity" />
-        <activity android:name=".QuizActivity" />
-        <activity android:name=".QuizModeActivity" />
-        <activity android:name=".SettingsActivity" />
+        <activity android:name=".ResourcesActivity" android:screenOrientation="fullSensor" />
+        <activity android:name=".StatsActivity" android:screenOrientation="fullSensor" />
+        <activity android:name=".ResultActivity" android:screenOrientation="fullSensor" />
+        <activity android:name=".QuizActivity" android:screenOrientation="fullSensor" />
+        <activity android:name=".QuizModeActivity" android:screenOrientation="fullSensor" />
+        <activity android:name=".SettingsActivity" android:screenOrientation="fullSensor" />
 
         <activity
             android:name=".MainActivity"
+            android:screenOrientation="fullSensor"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

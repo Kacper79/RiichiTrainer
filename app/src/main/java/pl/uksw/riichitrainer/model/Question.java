@@ -1,5 +1,11 @@
 package pl.uksw.riichitrainer.model;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
+
 public class Question {
     private String id;
     private String mode;
@@ -29,6 +35,34 @@ public class Question {
         this.correctIndex = correctIndex;
         this.explanation = explanation;
         this.yakuHint = yakuHint;
+    }
+
+    public void shuffleAnswers(long seed, float shuffleChance){
+        if (answers == null || answers.length <= 1 || correctIndex != 0 || shuffleChance <= 0.001) {
+            return;
+        }
+        if (shuffleChance > 1.0f) {
+            shuffleChance = 1.0f;
+        }
+
+        Random random = new Random(seed + id.hashCode()); //id must be different so the mixing differs between questions not only between runs
+
+        float roll = random.nextInt(100) / 100.0f;
+        if (roll >= shuffleChance) {
+            return; //do nothing, the dice decided :)
+        }
+
+        //begin shuffling
+        String tmpCorrCopy = answers[correctIndex];
+        List<String> newAns = Arrays.asList(answers);
+        Collections.shuffle(newAns, random);
+
+        for(int i = 0; i < newAns.size(); i++){
+            answers[i] = newAns.get(i);
+            if(answers[i] == tmpCorrCopy){
+                correctIndex = i;
+            }
+        }
     }
 
     public String getId() { return id; }

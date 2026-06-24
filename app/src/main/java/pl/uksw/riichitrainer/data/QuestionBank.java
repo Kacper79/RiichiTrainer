@@ -31,9 +31,9 @@ public class QuestionBank {
             return all;
         }
 
-        Collections.shuffle(result, new Random(seed)); //the questions should be shuffled and the seed must be known to be able to reproduce questions after orintation change
+        Collections.shuffle(result, new Random(seed)); //the questions should be shuffled and the seed must be known in advance to be able to reproduce questions after orintation change
 
-        if (result.size() > QUESTIONS_PER_GAME) {
+        if (result.size() > QUESTIONS_PER_GAME) { // limit the amount of questions (because prev you played on all questions which is obv a bad idea for replayability
             return new ArrayList<Question>(result.subList(0, QUESTIONS_PER_GAME));
         }
 

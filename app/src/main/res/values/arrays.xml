@@ -1,7 +1,9 @@
 <resources>
-    <string-array name="difficulty_labels">
+    <array name="difficulty_labels">
         <item>Easy</item>
         <item>Medium</item>
         <item>Hard</item>
-    </string-array>
+    </array>
 </resources>
+<!--  Android docs for xml array resources:  https://developer.android.com/guide/topics/resources/more-resources?hl=pl#TypedArray-->
+<!--  used in settings activity for Spinner (Spinner is android's combo box) View  -->

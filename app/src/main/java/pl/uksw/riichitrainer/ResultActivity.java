@@ -10,13 +10,13 @@ import android.widget.TextView;
 import pl.uksw.riichitrainer.data.QuestionBank;
 import pl.uksw.riichitrainer.data.SettingsStorage;
 import pl.uksw.riichitrainer.data.StatsStorage;
-import pl.uksw.riichitrainer.model.QuizResult;
+import pl.uksw.riichitrainer.util.RankScoreHelper;
 
 public class ResultActivity extends Activity {
     private int score;
     private int total;
     private String mode;
-    private QuizResult result;
+    //private QuizResult result;
     private SettingsStorage settings;
 
     @Override
@@ -29,7 +29,6 @@ public class ResultActivity extends Activity {
         total = getIntent().getIntExtra("total", 0);
         mode = getIntent().getStringExtra("mode");
         if (mode == null) mode = QuestionBank.MODE_MIXED;
-        result = new QuizResult(score, total, mode);
 
         if (savedInstanceState == null) {
             new StatsStorage(this).saveResult(score, total);
@@ -70,17 +69,22 @@ public class ResultActivity extends Activity {
         });
     }
 
+    public int getPercent() {
+        if (total == 0) return 0;
+        return Math.round((score * 100f) / total);
+    }
+
     private String buildResultText() {
         return settings.getNickname() + "\n"
                 + QuestionBank.getModeLabel(mode) + "\n\n"
                 + "Score: " + score + "/" + total + "\n"
-                + "Percent: " + result.getPercent() + "%\n"
-                + "Rank: " + result.getRank();
+                + "Percent: " + getPercent() + "%\n"
+                + "Rank: " + RankScoreHelper.getRank(score, total);
     }
 
     private void shareResult() {
         String text = "My Riichi Trainer result: " + score + "/" + total
-                + " (" + result.getPercent() + "%). Rank: " + result.getRank() + ".";
+                + " (" + getPercent() + "%). Rank: " + RankScoreHelper.getRank(score, total) + ".";
         Intent sendIntent = new Intent(Intent.ACTION_SEND);
         sendIntent.setType("text/plain");
         sendIntent.putExtra(Intent.EXTRA_TEXT, text);

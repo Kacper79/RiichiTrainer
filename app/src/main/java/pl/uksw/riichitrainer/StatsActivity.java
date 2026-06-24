@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import pl.uksw.riichitrainer.data.SettingsStorage;
 import pl.uksw.riichitrainer.data.StatsStorage;
+import pl.uksw.riichitrainer.util.RankScoreHelper;
 
 public class StatsActivity extends Activity {
     private TextView statsText;
@@ -48,7 +49,7 @@ public class StatsActivity extends Activity {
                 + "Total questions: " + statsStorage.getTotal() + "\n"
                 + "Average accuracy: " + statsStorage.getAveragePercent() + "%\n"
                 + "Best quiz: " + statsStorage.getBestPercent() + "%\n\n"
-                + "Current rank: " + statsStorage.getRank();
+                + "Current rank: " + RankScoreHelper.getRank(statsStorage.getCorrect(), statsStorage.getTotal());
         statsText.setText(text);
     }
 }

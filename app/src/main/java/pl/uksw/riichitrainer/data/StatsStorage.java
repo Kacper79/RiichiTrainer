@@ -44,15 +44,6 @@ public class StatsStorage {
         return Math.round(getCorrect() * 100f / total);
     }
 
-    public String getRank() {
-        int percent = getAveragePercent();
-        if (percent >= 90) return "Tenpai Master";
-        if (percent >= 75) return "Strong Intermediate";
-        if (percent >= 55) return "Careful Beginner";
-        if (getGames() == 0) return "No games yet";
-        return "Needs More Practice";
-    }
-
     public void clear() {
         preferences.edit().clear().apply();
     }
